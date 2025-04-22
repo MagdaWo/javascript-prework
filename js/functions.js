@@ -26,7 +26,7 @@ printMessage('Ruch komputera, to: ' + computerMove);
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
-console.log('Gracz wpisał: ' + playerInput);
+console.log('Wpisałeś: ' + playerInput);
 
 let playerMove = 'nieznany ruch';
 
@@ -38,4 +38,19 @@ if (playerInput == '1') {
 	playerMove = 'nożyce'; 23
 }
 
-printMessage('Ruch gracza, to: ' + playerMove);
+printMessage('Twój ruch, to: ' + playerMove);
+
+
+if (computerMove == 'kamień' && playerMove == 'papier') {
+	printMessage('Wygrywasz, a komputer przegrywa!');
+} else if (computerMove == 'papier' && playerMove == 'nożyce')
+	printMessage('Wygrywasz, hurra!');
+else if (computerMove == 'nożyce' && playerMove == 'kamień') {
+	printMessage('Wygrywaaasz');
+} else if (computerMove == playerMove) {
+	printMessage('Remis!');
+} else if (playerInput != '1' && playerInput != '2' && playerInput != '3')
+	printMessage('Nieznany ruch gracza!');
+else {
+	printMessage('Komputer wygrał!')
+}
