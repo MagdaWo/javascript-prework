@@ -1,5 +1,5 @@
 
-function playGame(playerInput) {
+const game = function playGame(playerInput) {
 
 	clearMessages()
 
@@ -64,30 +64,30 @@ function playGame(playerInput) {
 }
 
 
-function rock(){
-	playGame(1);
-  }
-  
-  let playRock = document.getElementById('play-rock');
-  
-  playRock.addEventListener('click', rock);
+function rock() {
+	game(1);
+}
+
+let playRock = document.getElementById('play-rock');
+
+playRock.addEventListener('click', rock);
 
 
-  function paper(){
-	playGame(2);
-  }
-  
-  let playPaper = document.getElementById('play-paper');
-  
-  playPaper.addEventListener('click', paper);
+function paper() {
+	game(2);
+}
 
-  function scissors(){
-	playGame(3);
-  }
-  
-  let playScissors = document.getElementById('play-scissors');
-  
-  playScissors.addEventListener('click', scissors);
+let playPaper = document.getElementById('play-paper');
+
+playPaper.addEventListener('click', paper);
+
+function scissors() {
+	game(3);
+}
+
+let playScissors = document.getElementById('play-scissors');
+
+playScissors.addEventListener('click', scissors);
 
 /*document.getElementById('play-rock').addEventListener('click', playGame(1));
 document.getElementById('play-paper').addEventListener('click', playGame(2));
